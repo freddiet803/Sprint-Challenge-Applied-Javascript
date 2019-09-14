@@ -17,3 +17,58 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+function createCarousel() {
+  //creating elements
+  let carousel = document.createElement('div');
+  let leftButton = document.createElement('div');
+  let imgMtn = document.createElement('img');
+  let imgPc = document.createElement('img');
+  let imgTrees = document.createElement('img');
+  let imgTurnTable = document.createElement('img');
+  let rightButton = document.createElement('div');
+
+  //adding classes
+  carousel.classList.add('carousel');
+  leftButton.classList.add('left-button');
+  rightButton.classList.add('right-button');
+  imgMtn.classList.add('theImgs');
+  imgPc.classList.add('theImgs');
+  imgTrees.classList.add('theImgs');
+  imgTurnTable.classList.add('theImgs');
+  //setting content or src
+  imgMtn.src = './assets/carousel/mountains.jpeg';
+  imgPc.src = './assets/carousel/computer.jpeg';
+  imgTrees.src = './assets/carousel/trees.jpeg';
+  imgTurnTable.src = './assets/carousel/turntable.jpeg';
+  leftButton.textContent = '<';
+  rightButton.textContent = '>';
+
+  //appending content
+  carousel.appendChild(leftButton);
+  carousel.appendChild(imgMtn);
+  carousel.appendChild(imgPc);
+  carousel.appendChild(imgTrees);
+  carousel.appendChild(imgTurnTable);
+  carousel.appendChild(rightButton);
+
+  console.log(carousel);
+  // let allTheImages = document.querySelectorAll('.theImgs');
+  // console.log(allTheImages);
+  return carousel;
+}
+
+let theCarousel = document.querySelector('.carousel-container');
+theCarousel.appendChild(createCarousel());
+
+let allTheImages = document.querySelectorAll('.theImgs');
+console.log(allTheImages);
+
+let clickLeftButton = document.querySelector('.left-button');
+let clickRightButton = document.querySelector('.right-button');
+console.log(clickLeftButton);
+console.log(clickRightButton);
+
+// allTheImages.forEach(img => {
+//   console.log(img);
+// });
